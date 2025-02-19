@@ -99,8 +99,8 @@ header nav {
 
     #main-content #subtitle {
         margin: 1rem;
-        font-size: 1.2rem;
-        font-size: 4rem;
+        font-size: 1rem;
+        font-size: 3rem;
         font-weight: bold;
     }
 
@@ -214,7 +214,7 @@ header nav {
     }
 
         #main-content #subtitle {
-            font-size: 3rem;
+            font-size: 2rem;
         }
 }
 /* Insert Footer from Apple Clone */
