@@ -316,9 +316,11 @@ header nav {
 }
 .event-pictures img{
     height: 400px;
+    padding: 20px;
 }
 .event-pictures{
     display: flex;
+    padding: 20px;
     justify-content: space-evenly;
 }
 .section-3 img{
