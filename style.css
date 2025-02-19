@@ -357,9 +357,11 @@ header nav {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 20px;
     }
     .event-pictures img{
         height: 350px;
         width: 200px;
+        padding: 20px;
     }
 }
