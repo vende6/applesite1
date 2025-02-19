@@ -217,6 +217,13 @@ header nav {
         }
 }
 /* Insert Footer from Apple Clone */
+.store {
+    display: flex;
+}
+
+.store img{
+    height: 22px;
+}
 .menu-items{
     margin-top: 30px;
     background-color: rgba(0, 0, 0, 0.099);
