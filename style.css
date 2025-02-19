@@ -302,3 +302,62 @@ header nav {
       padding: 10px;
     }
 }
+/* Insert first two rows - single and double image block */
+.apple-events{
+    background-color: black;
+    color: white;
+    margin-top: 100px;
+    padding: 40px;
+}
+
+.apple-events h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.event-pictures img{
+    height: 400px;
+}
+.event-pictures{
+    display: flex;
+    justify-content: space-evenly;
+}
+.section-3 img{
+    height: 700px;
+}
+.section-3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+.section-3 h1{
+    font-size: 40px;
+}
+
+@media only screen and (max-width:600px) {
+    .apple-events{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-3 img{
+        height: 400px;
+    }
+    .section-3 h1{
+        font-size: 30px;
+        margin: 20px;
+    }
+    .event-pictures{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .event-pictures img{
+        height: 350px;
+        width: 200px;
+    }
+}
