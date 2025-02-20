@@ -316,7 +316,7 @@ header nav {
     margin-bottom: 30px;
 }
 .event-pictures img{
-    height: 400px;
+    height: 200px;
     padding: 20px;
 }
 .event-pictures{
@@ -325,7 +325,7 @@ header nav {
     justify-content: space-evenly;
 }
 .section-3 img{
-    height: 700px;
+    height: 500px;
 }
 .section-3{
     display: flex;
@@ -348,7 +348,7 @@ header nav {
         align-items: center;
     }
     .section-3 img{
-        height: 400px;
+        height: 300px;
     }
     .section-3 h1{
         font-size: 30px;
@@ -361,8 +361,8 @@ header nav {
         padding: 20px;
     }
     .event-pictures img{
-        height: 350px;
-        width: 200px;
+        height: 150px;
+        width: 100px;
         padding: 20px;
     }
 }
