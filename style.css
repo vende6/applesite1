@@ -316,7 +316,7 @@ header nav {
     margin-bottom: 30px;
 }
 .event-pictures img{
-    height: 200px;
+    height: 100px;
     padding: 20px;
 }
 .event-pictures{
@@ -361,8 +361,8 @@ header nav {
         padding: 20px;
     }
     .event-pictures img{
-        height: 150px;
-        width: 100px;
+        height: 50px;
+        width: 50px;
         padding: 20px;
     }
 }
