@@ -1,368 +1,348 @@
-﻿* {
-    margin: 0;
-    padding: 0;
-    font-family: Verdana;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-ul {
-    list-style: none;
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+nav {
+  width: 100%;
+  max-width: 1900px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+  background-color: black;
+}
+button.dropdown-btn {
+  height: 44px;
+  padding: 0 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 400;
+  color: whitesmoke;
+  background-color: black;
+  margin: 0 8px;
+}
+.dropdown-positions {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  max-width: 1920px;
+  top: 100%;
+  left: 0;
+  padding: 10px;
+  visibility: hidden;
+  z-index: 1;
+  background-color: black;
+}
+.dropdown:hover .dropdown-positions {
+  display: flex;
+  justify-content: start;
+  width: auto;
+  height: auto;
+  background-color: black;
+  visibility: visible;
+  z-index: 1;
+}
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-content span {
+  padding: 10px 20px 10px 0;
+}
+.dropdown-content h3 {
+  font-size: 24px;
+  padding: 3px 20px 3px 0;
+  color: white;
+}
+.dropdown-content p {
+  color: white;
+  padding: 3px 20px 3px 0;
+}
+.dropdown:hover a {
+  color: gray;
+  visibility: visible;
+  text-decoration: none;
+}
+i.fa-apple {
+  height: 44px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: whitesmoke;
 }
 
-a {
-    text-decoration: none;
-    padding: 7px;
+i.fa-magnifying-glass {
+  height: 44px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: whitesmoke;
+  margin: 0 8px 0 0;
 }
 
-/* Navbar */
-header nav {
-    background-color: #333;
+i.fa-briefcase {
+  height: 44px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: whitesmoke;
 }
 
-#navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 0.7rem;
-    padding: 0 1rem;
-    max-width: 1000px;
-    margin: 0 auto;
+.img-picture-1 img {
+  position: absolute;
+  width: 100%;
+  max-width: 1900px;
+  height: auto;
+  z-index: 0;
 }
-
-    #navbar a {
-        color: #f5f5f7;
-        transform: 4s;
-    }
-
-        #navbar a:hover {
-            color: #fff;
-        }
-
-#bottom-header {
-    font-size: 0.8rem;
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
+.three-pictures img {
+  position: relative;
+  width: 100%;
+  max-width: 1900px;
+  height: 692px;
+  object-fit: cover;
+  object-position: center;
 }
-
-    #bottom-header h3 {
-        font-size: 1.2rem;
-    }
-
-    #bottom-header a {
-        color: #333;
-    }
-
-#bottom-header-inner {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.valentines-day {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  text-align: center;
+  color: white;
 }
-
-    #bottom-header-inner a {
-        margin: 0 0.5rem;
-    }
-
-    #bottom-header-inner .btn,
-    .btn {
-        background: #0071e3;
-        border-radius: 10rem;
-        padding: 0.4rem 1rem;
-        color: #fff;
-    }
-
-/* Conteúdo */
-#ribbon {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f5f5f7;
-    color: #1d1d1d;
-    font-size: 0.8rem;
+.valentines-day h2 {
+  font-size: 52px;
 }
-
-    #ribbon a {
-        color: #0071e3;
-    }
-
-#main-content {
-    text-align: center;
-    color: #1d1d1d;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.valentines-day p {
+  font-size: 28px;
+  padding: 10px;
 }
-
-    #main-content #title {
-        margin: 1rem;
-        font-size: 1.2rem;
-    }
-
-    #main-content #subtitle {
-        margin: 1rem;
-        font-size: 1rem;
-        font-size: 3rem;
-        font-weight: bold;
-    }
-
-    #main-content #description {
-        max-width: 600px;
-        margin: 1rem auto;
-        font-size: 1.1rem;
-        line-height: 1.5rem;
-    }
-
-    #main-content #price {
-        font-size: 1.3rem;
-        color: #86868b;
-        margin: 2rem;
-    }
-
-    #main-content .btn {
-        font-size: 1.1rem;
-        padding: 0.8rem 1.4rem;
-        align-self: center;
-    }
-
-    #main-content #product-image {
-        max-width: 1000px;
-        margin: 3rem auto;
-        opacity: 1;
-        transition: 0.5s;
-    }
-
-        #main-content #product-image.changing {
-            opacity: 0.5;
-        }
-
-#image-picker {
-    margin-bottom: 500px;
+.valentines-day button {
+  font-size: 17px;
+  padding: 15px 20px;
+  border-radius: 25px;
+  padding: 15px 20px;
+  margin: 0 8px;
+  color: white;
+  background-color: #0071e3;
+  border: none;
 }
-
-    #image-picker ul {
-        display: flex;
-        justify-content: center;
-    }
-
-    #image-picker li {
-        margin: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        cursor: pointer;
-    }
-
-        #image-picker li .color {
-            width: 2rem;
-            height: 2rem;
-            border-radius: 50%;
-            box-shadow: 1px 1px 1px;
-            border: 4px solid #fff;
-            pointer-events: none;
-        }
-
-        #image-picker li .description {
-            font-size: 0.7rem;
-            color: #1d1d1d;
-            margin-top: 0.6rem;
-        }
-
-#green .color {
-    background-color: #394c38;
+.img-picture-2 {
+  position: relative;
+  padding-top: 10px;
 }
-
-#silver .color {
-    background-color: #f1f2ed;
+.iPhone16Pro {
+  position: absolute;
+  color: white;
+  top: 10%;
+  left: 42%;
+  text-align: center;
 }
-
-#golden .color {
-    background-color: #fae7cf;
+.iPhone16Pro h2 {
+  font-size: 52px;
 }
-
-#grafite .color {
-    background-color: #54524f;
+.iPhone16Pro p {
+  font-size: 28px;
+  padding: 20px;
 }
-
-#blue .color {
-    background-color: #a7c1d9;
+.iPhone16Pro button {
+  font-size: 17px;
+  padding: 15px 20px;
+  margin: 0 8px;
+  border-radius: 25px;
+  color: white;
+  background-color: #0071e3;
+  border: none;
 }
-
-.selected {
-    outline: 2px solid #43a1ff;
+.iPhone16 {
+  position: absolute;
+  color: black;
+  top: 10%;
+  left: 42%;
+  text-align: center;
 }
-
-/* Mobile */
-@media (max-width: 480px) {
-    #navbar li {
-        display: none;
-    }
-
-    #navbar #logo {
-        display: flex;
-    }
-
-    #bottom-header-links a {
-        display: none;
-    }
-
-    #bottom-header-links .btn {
-        display: flex;
-    }
-
-    #main-content {
-        padding: 2rem;
-        overflow: hidden;
-    }
-
-        #main-content #subtitle {
-            font-size: 2rem;
-        }
+.img-picture-3 {
+  position: relative;
+  padding: 10px 0;
 }
-/* Insert Footer from Apple Clone */
-.store {
-    display: flex;
+.iPhone16 h2 {
+  font-size: 54px;
 }
-
-.store img{
-    height: 22px;
+.iPhone16 p {
+  font-size: 32px;
+  padding: 15px;
 }
-.menu-items{
-    margin-top: 30px;
-    background-color: rgba(0, 0, 0, 0.099);
+.iPhone16 button {
+  font-size: 17px;
+  padding: 15px 20px;
+  margin: 0 8px;
+  border-radius: 25px;
+  color: white;
+  background-color: #0071e3;
+  border: none;
 }
-.store{
-    margin-left: 5rem;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.six-pictures {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding-bottom: 15px;
 }
-.menu-list{
-    display: flex;
-    justify-content: space-evenly;
+.two-pictures {
+  display: flex;
+  column-gap: 15px;
 }
-.menu-list ul{
-    list-style: none;
+.two-pictures img {
+  width: 100%;
+  max-width: 942px;
+  height: auto;
+  cursor: pointer;
+  position: relative;
 }
-.footer p{
-    text-align: center;
+.one-picture {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
-.footer{
-    padding: 20px;
+.one-picture-content {
+  padding: 7px 15px;
+  position: absolute;
 }
-/* Insert slider */
-.services img{
-    height: 30px;
-    border-radius: 50%;
-    width: 30px;
+.one-picture-content h2 {
+  padding: 30px 0 0 0;
 }
-
-.services a{
-    color: blue;
+.one-picture-content img {
+  width: 100px;
+  height: 50px;
+  left: 50px;
 }
-.section{
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 40px;
-    background-color: rgba(0, 0, 0, 0.099);
-    margin-top: 30px;
+.one-picture-content h2 {
+  color: white;
 }
-.titles h1{
-    font-size: 40px;
+.one-picture-content p {
+  color: white;
+  padding: 10px 0;
 }
-.products{
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 30px;
-    background-color: rgba(0, 0, 0, 0.099);
+.one-picture-content button {
+  font-size: 17px;
+  padding: 15px 20px;
+  border-radius: 25px;
+  color: white;
+  background-color: #0071e3;
+  border: none;
+  cursor: pointer;
 }
-
-.product img{
-    height: 90px;
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
-.product a{
-    text-decoration: none;
-    color: black;
-    margin-top: 20px;
-   
+.slider-track {
+  display: flex;
+  gap: 0 8px;
+  width: max-content;
+  animation: slide-left 20s linear infinite;
 }
-.product{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 30px;
+.slider-content img {
+  width: 417px;
+  cursor: pointer;
+  z-index: 0;
 }
-@media only screen and (max-width:600px) {
-  .section{
-        display: flex;
-        flex-direction: column;
-        padding: 30px;
-    }
-    .titles h1{
-        font-size: 30px;
-    }
-   .menu-list ul{
-      font-size: 12px;
-      padding: 10px;
-    }
+.slider-content p {
+  position: absolute;
+  bottom: 25px;
+  padding: 0 20px;
+  color: white;
 }
-/* Insert first two rows - single and double image block */
-.apple-events{
-    background-color: black;
-    color: white;
-    margin-top: 100px;
-    padding: 40px;
+.slider-content button {
+  position: absolute;
+  top: 100px;
+  padding: 8px;
+  border-radius: 25px;
+  border: 0 solid white;
+  cursor: pointer;
+  visibility: hidden;
+  z-index: 1;
 }
-
-.apple-events h1{
-    text-align: center;
-    margin-bottom: 30px;
+.slider-one-content {
+  display: flex;
+  justify-content: center;
 }
-.event-pictures img{
-    height: 100px;
-    padding: 20px;
+.slider-content:hover button {
+  visibility: visible;
 }
-.event-pictures{
-    display: flex;
-    padding: 20px;
-    justify-content: space-evenly;
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
-.section-3 img{
-    height: 500px;
+footer {
+  padding-top: 20px;
+  width: auto;
+  background-color: whitesmoke;
+  font-size: 12px;
+  color: rgb(0 0 0 / 56%);
 }
-.section-3{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 30px;
+.footer-width {
+  width: 980px;
+  margin: auto;
 }
-.section-3 h1{
-    font-size: 40px;
+footer p {
+  padding: 5px 0;
+  margin: auto;
 }
-
-@media only screen and (max-width:600px) {
-    .apple-events{
-        display: flex;
-        flex-direction: column;
-    }
-    .section-3{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .section-3 img{
-        height: 300px;
-    }
-    .section-3 h1{
-        font-size: 30px;
-        margin: 20px;
-    }
-    .event-pictures{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-    .event-pictures img{
-        height: 50px;
-        width: 50px;
-        padding: 20px;
-    }
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.footer-content span {
+  font-weight: bold;
+}
+.footer-row {
+  display: flex;
+  flex-direction: column;
+}
+.footer-row a {
+  text-decoration: none;
+  color: rgb(0 0 0 / 72%);
+  padding: 4px;
+}
+hr {
+  margin: 10px 0;
+}
+.footer-start-end {
+  display: flex;
+  justify-content: space-between;
+  height: 44px;
+  color: gray;
+}
+.footer-start {
+  display: flex;
+}
+.footer-start p {
+  padding: 0 5px 5px 5px;
+}
+.footer-end {
+  padding: 10px 3px;
 }
